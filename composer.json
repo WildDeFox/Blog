@@ -1,0 +1,15 @@
+{
+    "name": "blog/defox",
+    "autoload": {
+        "psr-4": {
+            "Blog\\Defox\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WildMrDeFold",
+            "email": "wildmrdefox@gmail.com"
+        }
+    ],
+    "require": {}
+}
