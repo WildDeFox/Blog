@@ -19,4 +19,9 @@ class User
     {
         return "Пользователь $this->name с id:$this->id";
     }
+
+    public function getId(): string
+    {
+        return $this->id;
+    }
 }
