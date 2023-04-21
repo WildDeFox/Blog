@@ -9,6 +9,4 @@ include __DIR__ . '/vendor/autoload.php';
 $name = new Name('Никита', 'Капурин');
 $user = new User(1, $name);
 $post = new Post(2, $user, 'Привет мир, это мой первый пост');
-echo $user . PHP_EOL;
-echo $name . PHP_EOL;
-echo $post . PHP_EOL;
+
