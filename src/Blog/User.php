@@ -15,6 +15,24 @@ class User
         $this->name = $name;
     }
 
+    /**
+     * @return Name
+     */
+    public function getName(): Name
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param Name $name
+     */
+    public function setName(Name $name): void
+    {
+        $this->name = $name;
+    }
+
+
+
     public function __toString(): string
     {
         return "Пользователь $this->name с id:$this->id";
