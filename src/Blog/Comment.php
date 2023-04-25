@@ -81,8 +81,6 @@ class Comment
         $this->text = $text;
     }
 
-
-
     public function __toString(): string
     {
         return $this->user . ' пишет коммент ' . $this->text;
