@@ -2,6 +2,8 @@
 
 namespace Blog\Defox\Blog\Command;
 
+use Blog\Defox\Exceptions\ArgumentsException;
+
 class Arguments
 {
     private array $arguments = [];
@@ -30,10 +32,13 @@ class Arguments
         return new self($arguments);
     }
 
+    /**
+     * @throws ArgumentsException
+     */
     public function get(string $argument): string
     {
         if (!array_key_exists($argument, $this->arguments)) {
-            throw new ArgunentsException(
+            throw new ArgumentsException(
                 "No such argument: $argument"
             );
         }
