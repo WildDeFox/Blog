@@ -11,5 +11,7 @@
             "email": "wildmrdefox@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "symfony/polyfill-uuid": "^1.27"
+    }
 }
