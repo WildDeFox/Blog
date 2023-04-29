@@ -4,31 +4,33 @@ namespace Blog\Defox\Blog;
 
 class Post
 {
-    private int $id;
+    private UUID $uuid;
     private User $user;
+    private string $title;
     private string $text;
 
-    public function __construct(int $id, User $user, string $text)
+    public function __construct(UUID $uuid, User $user, string $title, string $text)
     {
-        $this->id = $id;
+        $this->uuid = $uuid;
         $this->user = $user;
+        $this->title = $title;
         $this->text = $text;
     }
 
     /**
-     * @return int
+     * @return UUID
      */
-    public function getId(): int
+    public function getUuid(): UUID
     {
-        return $this->id;
+        return $this->uuid;
     }
 
     /**
-     * @param int $id
+     * @param UUID $uuid
      */
-    public function setId(int $id): void
+    public function setUuid(UUID $uuid): void
     {
-        $this->id = $id;
+        $this->uuid = $uuid;
     }
 
     /**
@@ -50,6 +52,22 @@ class Post
     /**
      * @return string
      */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param string $title
+     */
+    public function setTitle(string $title): void
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * @return string
+     */
     public function getText(): string
     {
         return $this->text;
@@ -63,10 +81,8 @@ class Post
         $this->text = $text;
     }
 
-
-
     public function __toString(): string
     {
-        return "Пользователь $this->user оставил пост: $this->text, id:$this->id";
+        return "$this->user $this->uuid пишет $this->title, $this->text";
     }
 }
