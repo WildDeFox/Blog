@@ -12,6 +12,7 @@
         }
     ],
     "require": {
-        "symfony/polyfill-uuid": "^1.27"
+        "symfony/polyfill-uuid": "^1.27",
+      "ext-pdo": "*"
     }
 }
