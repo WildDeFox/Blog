@@ -2,7 +2,7 @@
 
 namespace Blog\Defox\Exceptions;
 
-class PostNotFoundExceptions
+class PostNotFoundExceptions extends AppExceptions
 {
 
 }
