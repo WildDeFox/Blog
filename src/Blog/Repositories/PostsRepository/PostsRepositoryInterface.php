@@ -1,6 +1,6 @@
 <?php
 
-namespace Blog\Defox\Repositories\PostsRepository;
+namespace Blog\Defox\Blog\Repositories\PostsRepository;
 
 use Blog\Defox\Blog\Post;
 use Blog\Defox\Blog\UUID;

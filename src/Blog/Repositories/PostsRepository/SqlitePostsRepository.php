@@ -1,13 +1,13 @@
 <?php
 
-namespace Blog\Defox\Repositories\PostsRepository;
+namespace Blog\Defox\Blog\Repositories\PostsRepository;
 
 use Blog\Defox\Blog\Post;
+use Blog\Defox\Blog\Repositories\UserRepository\SqliteUsersRepository;
 use Blog\Defox\Blog\UUID;
 use Blog\Defox\Exceptions\InvalidArgumentExceptions;
 use Blog\Defox\Exceptions\PostNotFoundExceptions;
 use Blog\Defox\Exceptions\UserNotFoundException;
-use Blog\Defox\Repositories\UserRepository\SqliteUsersRepository;
 use PDO;
 use PDOStatement;
 
@@ -35,6 +35,11 @@ class SqlitePostsRepository implements PostsRepositoryInterface
         ]);
     }
 
+    /**
+     * @throws InvalidArgumentExceptions
+     * @throws PostNotFoundExceptions
+     * @throws UserNotFoundException
+     */
     public function get(UUID $uuid): Post
     {
         $statement = $this->connection->prepare(
