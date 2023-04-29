@@ -1,5 +1,5 @@
 <?php
-namespace Blog\Defox\Repositories\UserRepository;
+namespace Blog\Defox\Blog\Repositories\UserRepository;
 use Blog\Defox\Blog\User;
 use Blog\Defox\Blog\UUID;
 
